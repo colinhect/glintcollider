@@ -1,0 +1,55 @@
+Scene 
+
+SceneOptions {
+    optImageSize = (800, 600),
+    optFocalLength = 10,
+    optLenseHeight = 2,
+    optExposure = -1
+}
+
+[
+    Sphere {
+        sphMaterial = Material {
+            matColor = Color 0 0 1,
+            matSpecular = Color 1 1 1,
+            matShininess = 200,
+            matRefl = 0.1, 
+            matOpacity = 3.0
+        }, 
+        sphOrigin = Vector 4 -1 10,
+        sphRadius = 2.0
+    },
+    Sphere {
+        sphMaterial = Material {
+            matColor = Color 1 0 1,
+            matSpecular = Color 1 1 1,
+            matShininess = 120,
+            matRefl = 0.01, 
+            matOpacity = 3.0
+        }, 
+        sphOrigin = Vector -4 -1 10,
+        sphRadius = 2.0
+    },
+    Plane {
+        plnMaterial = Material {
+            matColor = Color 1 1 1,
+            matSpecular = Color 1 1 1,
+            matShininess = 0,
+            matRefl = 1.0, 
+            matOpacity = 1.0
+        }, 
+        plnNormal = Vector 0 1 0,
+        plnDist = -3.0
+    }
+] [
+    PointLight {
+        plOrigin = Vector 0 5 5,
+        plColor = Color 1 1 1,
+        plRadius = 60.0
+    },
+    PointLight {
+        plOrigin = Vector 0 1 10,
+        plColor = Color 1 1 1,
+        plRadius = 60.0
+    }
+]
